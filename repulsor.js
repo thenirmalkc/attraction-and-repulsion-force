@@ -30,7 +30,7 @@ class Repulsor {
     force
       .mult(G * this.mass * obj.mass)
       .div(Math.pow(r, 2))
-      .constraint(0.4, 0.8)
+      .constraint(0.2, 0.4)
 
     return force
   }

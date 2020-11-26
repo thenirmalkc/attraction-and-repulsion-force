@@ -5,7 +5,7 @@ class Vehicle {
     this.velocity = new Vector2D(0, 0)
     this.acceleration = new Vector2D(0, 0)
 
-    this.mass = 2
+    this.mass = 4
     this.color
   }
 
@@ -65,21 +65,24 @@ class Vehicle {
 
     // calculating 3 points of a triangle
 
-    const p2 = this.position.copy()
+    const p2 = this.velocity
+      .copy()
+      .set_mag(8)
+      .add(this.position)
 
     const p1 = this.velocity
       .copy()
-      .set_mag(16)
+      .set_mag(8)
       .mult(-1)
-      .rotate_in_degree(12)
-      .add(p2)
+      .rotate_in_degree(16)
+      .add(this.position)
 
     const p3 = this.velocity
       .copy()
-      .set_mag(16)
+      .set_mag(8)
       .mult(-1)
-      .rotate_in_degree(-12)
-      .add(p2)
+      .rotate_in_degree(-16)
+      .add(this.position)
 
     noStroke()
     fill(this.color)

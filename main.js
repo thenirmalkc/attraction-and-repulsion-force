@@ -49,7 +49,7 @@ function draw() {
     distance = Math.pow(distance, 2)
 
     // applying repulsion force when distance between vehicle and attractor is less than 4200
-    if(distance < 4200) {
+    if(distance < 8400) {
       repulsion_force = repulsor.calc_repulsion_force(vehicles[i])
       vehicles[i].apply_force(repulsion_force)
 
