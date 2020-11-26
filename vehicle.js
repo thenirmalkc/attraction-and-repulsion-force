@@ -67,14 +67,14 @@ class Vehicle {
 
     const p2 = this.position.copy()
 
-    const p1 = this.acceleration
+    const p1 = this.velocity
       .copy()
       .set_mag(16)
       .mult(-1)
       .rotate_in_degree(12)
       .add(p2)
 
-    const p3 = this.acceleration
+    const p3 = this.velocity
       .copy()
       .set_mag(16)
       .mult(-1)

@@ -19,7 +19,7 @@ let distance
 function setup() {
 	const canvas = createCanvas(width, height)
   canvas.position((windowWidth - width) / 2, (windowHeight - height) / 2)
-	background(80)
+	background(40)
 
   attractor = new Attractor(width / 2 - 12, height / 2)
 
@@ -33,7 +33,7 @@ function setup() {
 
 
 function draw() {
-  background(80)
+  background(40)
 
   for(let i = 0; i < vehicles.length; i ++) {
     attraction_force = attractor.calc_attraction_force(vehicles[i])
