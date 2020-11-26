@@ -13,32 +13,6 @@ class Vehicle {
     this.mass = mass
   }
 
-  // calc_attraction_force(obj) {
-
-  //   // Gravitational Constant
-  //   const G = 1
-
-  //   // distance betweem 2 objects
-  //   const r = this.position
-  //     .copy()
-  //     .sub(obj.position)
-  //     .mag()
-
-  //   // getting direction of force
-  //   const force = this.position
-  //     .copy()
-  //     .sub(obj.position)
-  //     .normalize()
-
-  //   // f = G * m1 * m2 / (r^2)
-  //   force
-  //     .mult(G * this.mass * obj.mass)
-  //     .div(Math.pow(r, 2))
-  //     .constraint(0.02, 0.04)
-
-  //   return force
-  // }
-
   apply_force(force) {
     force = force.copy()
 
